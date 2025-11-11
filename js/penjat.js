@@ -2,7 +2,7 @@
 let palabras = ["uno","dos","tres"]
 window.onload = () => {
     
-    let input = document.getElementById("cuadro");
+    let input = document.getElementById("cuadro-2");
      for (let i of palabras[2]){
         input.innerHTML+=  '<div> <input type="text" maxlength="1" style="width: 30px; text-align: center;">    </input>   </div>   '
      }
