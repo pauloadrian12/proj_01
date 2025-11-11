@@ -18,4 +18,7 @@ window.onload = () => {
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3aec5ade64aae278d7b0eb7a9c69b64de174b0a5
