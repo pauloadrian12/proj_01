@@ -1,6 +1,24 @@
 //poner aqui conexion con paraules.js y sacar una pálabra random
+
+function inicialitzaJoc() {
+  let numero = parseInt(Math.random() * PARAULES.length);
+  paraulaSecreta = PARAULES[numero];
+  paraulaVisible = [];
+
+  let i = 0;
+  while (i < paraulaSecreta.length) {
+    paraulaVisible.push("_");
+    i = i + 1;
+  }
+
+  document.getElementById("paraula").innerText = paraulaVisible.join(" ");
+}
+
+
+
 let palabras = ["uno","dos","tres"]
 window.onload = () => {
+    inicialitzaJoc();
     
     let input = document.getElementById("cuadro-2");
      for (let i of palabras[2]){
@@ -17,4 +35,6 @@ window.onload = () => {
     })
 
 }
+
+
 
