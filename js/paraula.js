@@ -1,5 +1,14 @@
 //poner aqui conexion con paraules.js y sacar una pálabra random
 
+let paraulaSecreta = "";
+let paraulaVisible = [];
+let vides = 6;
+let temps = 0;
+let interval;
+let popup;
+let lletresProvades = [];
+
+
 function inicialitzaJoc() {
   let numero = parseInt(Math.random() * PARAULES.length);
   paraulaSecreta = PARAULES[numero];
@@ -16,24 +25,6 @@ function inicialitzaJoc() {
 
 
 
-let palabras = ["uno","dos","tres"]
-
-
-
-window.onload = () => {
-    inicialitzaJoc();
-    
-    let win = window.open("./penjat.html", "", "popup,width=500,height=500");
-    let form=document.getElementById("lletra")
-    
-
-
-    document.getElementById("prova").addEventListener("click", () => {
-       console.log(form.value)
-        
-    })
-
-}
 
 
 
