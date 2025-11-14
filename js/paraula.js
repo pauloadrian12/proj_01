@@ -12,6 +12,7 @@ let lletresProvades = [];
 function inicialitzaJoc() {
   let numero = parseInt(Math.random() * PARAULES.length);
   paraulaSecreta = PARAULES[numero];
+  console.log(paraulaSecreta)
   paraulaVisible = [];
 
   let i = 0;
