@@ -1,13 +1,3 @@
-//poner aqui conexion con paraules.js y sacar una pálabra random
-
-let paraulaSecreta = "";
-let paraulaVisible = [];
-let vides = 6;
-let temps = 0;
-let interval;
-let popup;
-let lletresProvades = [];
-
 
 function inicialitzaJoc() {
   let numero = parseInt(Math.random() * PARAULES.length);
