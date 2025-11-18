@@ -14,11 +14,20 @@
 
     </div>
     <script>
-        window.addEventListener("message", (e) => {
+
+        window.addEventListener("message", (vidas) => {
             // Només acceptem peticions amb el mateix origen
-            if (e.origin === "http://127.0.0.1:5500") {
-                console.log(e.data);
+            if (vidas.origin === "http://127.0.0.1:5500") {
+              
+
+console.log(vidas)
+
+
+
             }
         });
+
+
+    
     </script>
 </body>

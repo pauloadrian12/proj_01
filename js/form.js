@@ -1,6 +1,8 @@
 function cambiar_img(cambiar){
 
-popup.postMessage({"2": 3}, "http://127.0.0.1:5500");
+popup.postMessage({vides}, "http://127.0.0.1:5500");
+
+
 }
 
 /**
@@ -13,8 +15,6 @@ function analizar(dat, pal) {
     console.log("analizando....")
        
     let resultado = "palabra no encontrada"
-
-//.innerHTML = <img src="../imagenes/1.jpg" alt="MDN" />
 
 
  // vidas - 1 o algo asi
