@@ -1,30 +1,31 @@
-function cambiar_img(cambiar){
+function letra_incorrecta(vides){
+vides--;
+win.postMessage({vides}, "http://127.0.0.1:5500");
 
-popup.postMessage({vides}, "http://127.0.0.1:5500");
-
-
+return vides
 }
 
 /**
  * 
- * @param {String} dat palabra dada por el usuario
+ * @param {String} dat letra dada por el usuario
  * @param {String} pal palabra secreta
  * @returns {String} palabra ( encontrada | no encontrada )
  */
-function analizar(dat, pal) {
+function analizar(dat, pal ) {
     console.log("analizando....")
-       
-    let resultado = "palabra no encontrada"
+    let enc=false   
+    let resultado = "letra no encontrada"
 
-
- // vidas - 1 o algo asi
     for (let i of pal) {
         if (dat === i) {
-            resultado = "palabra encontrada!!!"
+            enc=true
+            resultado = "letra encontrada!!!"
             break;
         }
 
     }
+
+    enc || ( vides=letra_incorrecta(vides) )
 
     //agregar funcion de contaco con cmabiar img
     return resultado 
@@ -57,6 +58,7 @@ function eval_form() {
 
                     for (let letr of lletresProvades) {
                         if (dato_rec == letr) {
+                        bloque_mensaje.innerHTML="caracter ya probado"
                         letra_nueva = false
                             break
                         }
