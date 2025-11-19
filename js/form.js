@@ -7,6 +7,7 @@
 function letra_incorrecta(vidas){
 vidas--;
 win.postMessage({vidas}, "http://127.0.0.1:5500");
+console.log(XMLDocument.vidas)
 
 return vidas
 }
