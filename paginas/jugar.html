@@ -9,34 +9,38 @@
 </head>
 
 
-<body class="text-center p-4 bg-light">
+<body class="text-center p-4 bg-light position-relative">
 
 
+  <div>
+    <div>
+      <h2>El Joc del Penjat</h2>
+      <p id="paraula" class="fs-3 fw-bold"></p>
 
-  <h2>El Joc del Penjat</h2>
-  <p id="paraula" class="fs-3 fw-bold"></p>
 
+      <div class="row mt-4 justify-content-center">
 
-  <div class="row mt-4 justify-content-center">
+        <div class="col-6">
 
-    <div class="col-6">
+          <div class="input-group mb-3 ">
 
-      <div class="input-group mb-3">
+            <input type="text" id="lletra" class="form-control" placeholder="Escriu una lletra">
 
-        <input type="text" id="lletra" class="form-control" placeholder="Escriu una lletra">
+            <button id="prova" class="btn btn-primary ">Prova</button>
 
-        <button id="prova" class="btn btn-primary">Prova</button>
+          </div>
 
+        </div>
+        <div class="col-12" id="mensaje"> </div>
       </div>
-
     </div>
-   <div class="col-12" id="mensaje">  </div>
   </div>
-
   <script src="../javascript/paraules.js"></script>
   <script src="../js/paraula.js"></script>
   <script src="../js/form.js"></script>
   <script src="../js/penjat.js"></script>
 
+
 </body>
+
 </html>

@@ -13,9 +13,8 @@ window.onload = () => {
 
   
     inicialitzaJoc();
-    eval_form(win)
+    eval_form();
 
-   
 }
 
 
