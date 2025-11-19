@@ -12,6 +12,7 @@ function inicialitzaJoc() {
   }
 
   document.getElementById("paraula").innerText = paraulaVisible.join(" ");
+  document.getElementById("vides").innerText = vides;
 }
 
 
