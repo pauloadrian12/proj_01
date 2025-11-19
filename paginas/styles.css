@@ -1,12 +1,23 @@
-#cuadro-1{
+#cuadro-1 {
     height: 100vh;
-    
+
+}
+
+
+body {
+    position: relative;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 
 
- 
-a{
-    text-decoration: none;
-    color: white;
+.linia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

@@ -9,18 +9,20 @@
 
 
 <body>
-    <div class="row justify-content-around text-center" id="penjat">
-        <img src="../imagenes/1.jpg" alt="MDN" />
+     <div class="row justify-content-around text-center" id="penjat">
+        <img id="imagenes" src="../imagenes/6.jpg" alt="MDN" />
 
     </div>
     <script>
-
+        
         window.addEventListener("message", (vidas) => {
-            // Només acceptem peticions amb el mateix origen
+            
             if (vidas.origin === "http://127.0.0.1:5500") {
-              
+                
+                            document.getElementById("imagenes").setAttribute("src", "../imagenes/" + vidas.data.vidas + ".jpg")
 
-console.log(vidas)
+
+                console.log(vidas.data)
 
 
 
