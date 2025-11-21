@@ -9,17 +9,17 @@
 
 
 <body>
-     <div class="row justify-content-around text-center" id="penjat">
+    <div class="row justify-content-around text-center" id="penjat">
         <img id="imagenes" src="../imagenes/6.jpg" alt="MDN" />
 
     </div>
     <script>
-        
+
         window.addEventListener("message", (vidas) => {
-            
+
             if (vidas.origin === "http://127.0.0.1:5500") {
-                
-                            document.getElementById("imagenes").setAttribute("src", "../imagenes/" + vidas.data.vidas + ".jpg")
+
+                document.getElementById("imagenes").setAttribute("src", "../imagenes/" + vidas.data.vidas + ".jpg")
 
 
                 console.log(vidas.data)
@@ -30,6 +30,6 @@
         });
 
 
-    
+
     </script>
 </body>

@@ -5,10 +5,7 @@
  * @returns vidas-1
  */
 function letra_incorrecta(vidas) {
-
     vidas--;
-
-
     win.postMessage({ vidas }, "http://127.0.0.1:5500");
     console.log(XMLDocument.vidas)
 
@@ -31,15 +28,16 @@ function analizar(dat, pal, vidas) {
     console.log("analizando....")
     let enc = false
     let resultado = "letra no encontrada"
+    let i = 0;
 
-    for (let i of pal) {
-        if (dat === i) {
-            enc = true
-            resultado = "letra encontrada!!!"
-
-            break;
+    while (i < pal.length) {
+        if (pal.charAt(i) == dat) {
+            paraulaVisible[i] = dat;
+            enc = true;
+            resultado = "letras encontrada!!!"
+            document.getElementById("paraula").innerText = paraulaVisible.join(" ");
         }
-
+        i = i + 1;
     }
 
     enc || (vidas = letra_incorrecta(vidas))
@@ -70,7 +68,6 @@ function eval_form() {
         // si dato del form es 1 letra evalua si esta esta en los caracteres
         if (dato_rec.length == 1) {
             mensaje = "caracter no valido";
-
             for (let i of caracteres) {
                 //si la letra si esta en los caracteres evalua si esta en la lista de letras provadas
                 if (dato_rec === i) {
@@ -91,11 +88,13 @@ function eval_form() {
                     if (letra_nueva) { [mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides) }
                     mensaje == "HAS PERDIDO" && boton.setAttribute("disabled",true);
                     break;
+
+
                 }
             }
 
         } else {
-            (mensaje = "solo intruzca un letra")
+            (mensaje = "solo introduzca un letra")
         }
 
         bloque_mensaje.innerHTML = mensaje
