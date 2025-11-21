@@ -4,12 +4,15 @@
  * @param {Number} vidas numero de vidas actual
  * @returns vidas-1
  */
-function letra_incorrecta(vidas){
-vidas--;
-win.postMessage({vidas}, "http://127.0.0.1:5500");
-console.log(XMLDocument.vidas)
+function letra_incorrecta(vidas) {
 
-return vidas
+    vidas--;
+
+
+    win.postMessage({ vidas }, "http://127.0.0.1:5500");
+    console.log(XMLDocument.vidas)
+
+    return vidas
 }
 
 
@@ -21,25 +24,29 @@ return vidas
  * @param {String} dat letra dada por el usuario
  * @param {String} pal palabra secreta
  * @param {Number} vidas cantidad actual de vidas
+ *
  * @returns {String} palabra ( encontrada | no encontrada ) , ( Vidas | Vidas - 1 ) 
  */
-function analizar(dat, pal,vidas) {
+function analizar(dat, pal, vidas) {
     console.log("analizando....")
-    let enc=false   
+    let enc = false
     let resultado = "letra no encontrada"
 
     for (let i of pal) {
         if (dat === i) {
-            enc=true
+            enc = true
             resultado = "letra encontrada!!!"
+
             break;
         }
 
     }
 
-    enc || ( vidas=letra_incorrecta(vidas) )
+    enc || (vidas = letra_incorrecta(vidas))
 
-    return [resultado,vidas]
+    vidas || (resultado = "HAS PERDIDO")
+
+    return [resultado, vidas]
 
 }
 
@@ -49,11 +56,13 @@ function analizar(dat, pal,vidas) {
 function eval_form() {
     let form = document.getElementById("lletra")
     let bloque_mensaje = document.getElementById("mensaje")
-    
+    const boton=document.getElementById("prova")
 
 
 
-    document.getElementById("prova").addEventListener("click", () => {
+
+    boton.addEventListener("click", () => {
+
         let dato_rec = form.value
         bloque_mensaje.innerHTML = "";
         let mensaje = ""
@@ -65,20 +74,22 @@ function eval_form() {
             for (let i of caracteres) {
                 //si la letra si esta en los caracteres evalua si esta en la lista de letras provadas
                 if (dato_rec === i) {
-                    let letra_nueva =true
+                    let letra_nueva = true
 
                     for (let letr of lletresProvades) {
                         if (dato_rec == letr) {
-                        mensaje="caracter ya probado"
-                        letra_nueva = false
+                            mensaje = "caracter ya probado"
+                            letra_nueva = false
                             break
                         }
                     }
                     // si es una letra nueva la agrega a las probadas y analiza
                     lletresProvades.push(dato_rec)
-                     console.log(letra_nueva)
-                    if (letra_nueva )
-                        {[mensaje,vides] = analizar(dato_rec, paraulaSecreta,vides) }
+
+
+                    
+                    if (letra_nueva) { [mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides) }
+                    mensaje == "HAS PERDIDO" && boton.setAttribute("disabled",true);
                     break;
                 }
             }
@@ -87,8 +98,8 @@ function eval_form() {
             (mensaje = "solo intruzca un letra")
         }
 
-    bloque_mensaje.innerHTML=mensaje
-
+        bloque_mensaje.innerHTML = mensaje
+        document.getElementById("vides").innerText = +vides;
     })
 
 
