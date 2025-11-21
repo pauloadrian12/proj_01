@@ -88,6 +88,7 @@ function eval_form() {
         } else {
             (mensaje = "solo introduzca un letra")
         }
+        form.value = ""
         bloque_mensaje.innerHTML = mensaje
 
     })
