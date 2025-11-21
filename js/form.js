@@ -96,6 +96,11 @@ function eval_form() {
         } else {
             (mensaje = "solo introduzca un letra")
         }
+<<<<<<< HEAD
+=======
+        form.value = ""
+        bloque_mensaje.innerHTML = mensaje
+>>>>>>> 0e7c3227c3799356737bb53ac74865f87084d617
 
         bloque_mensaje.innerHTML = mensaje
         document.getElementById("vides").innerText = +vides;
