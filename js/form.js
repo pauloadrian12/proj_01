@@ -54,7 +54,7 @@ function analizar(dat, pal, vidas) {
 function eval_form() {
     let form = document.getElementById("lletra")
     let bloque_mensaje = document.getElementById("mensaje")
-    const boton=document.getElementById("prova")
+    const boton = document.getElementById("prova")
 
 
 
@@ -84,9 +84,9 @@ function eval_form() {
                     lletresProvades.push(dato_rec)
 
 
-                    
+
                     if (letra_nueva) { [mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides) }
-                    mensaje == "HAS PERDIDO" && boton.setAttribute("disabled",true);
+                    mensaje == "HAS PERDIDO" && boton.setAttribute("disabled", true);
                     break;
 
 
@@ -96,12 +96,7 @@ function eval_form() {
         } else {
             (mensaje = "solo introduzca un letra")
         }
-<<<<<<< HEAD
-=======
         form.value = ""
-        bloque_mensaje.innerHTML = mensaje
->>>>>>> 0e7c3227c3799356737bb53ac74865f87084d617
-
         bloque_mensaje.innerHTML = mensaje
         document.getElementById("vides").innerText = +vides;
     })
