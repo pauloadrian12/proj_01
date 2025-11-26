@@ -42,7 +42,7 @@ function analizar(dat, pal, vidas) {
 
     enc || (vidas = letra_incorrecta(vidas))
 
-    vidas || (resultado = "HAS PERDIDO")
+    vidas || (resultado = "HAS PERDIDO, " + "La palabra secreta era: " + pal)
 
     return [resultado, vidas]
 
@@ -76,6 +76,7 @@ function eval_form() {
                     for (let letr of lletresProvades) {
                         if (dato_rec == letr) {
                             mensaje = "caracter ya probado"
+
                             letra_nueva = false
                             break
                         }
@@ -85,7 +86,10 @@ function eval_form() {
 
 
 
-                    if (letra_nueva) { [mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides) }
+                    if (letra_nueva) {
+                        [mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides)
+                    }
+
                     mensaje == "HAS PERDIDO" && boton.setAttribute("disabled", true);
                     break;
 
@@ -98,9 +102,9 @@ function eval_form() {
         }
         form.value = ""
         bloque_mensaje.innerHTML = mensaje
+
         document.getElementById("vides").innerText = +vides;
     })
-
 
 
 }
