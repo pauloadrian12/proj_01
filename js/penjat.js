@@ -1,7 +1,7 @@
 
 let paraulaSecreta = "";
 let paraulaVisible = [];
-let vides = 6;
+let vides = 1;
 let temps = 0;
 let interval;
 let popup;
@@ -9,6 +9,7 @@ let lletresProvades = [];
 //cookies o localstorage
 let metodo_guardado ="Cookies"
 let contador
+let tiempo 
 
 
 
@@ -20,12 +21,12 @@ window.onload = () => {
 
     contador = setInterval(() => {
         Temporizador.setSeconds(Temporizador.getSeconds()+1)
-        document.getElementById("temp").innerText =  Temporizador.getMinutes() +" : " + Temporizador.getSeconds() ;
+         tiempo= Temporizador.getMinutes() +" : " + Temporizador.getSeconds()
+        document.getElementById("temp").innerText =  tiempo;
     }, 1000);
     
     inicialitzaJoc();
     eval_form()
-
 
 
 }

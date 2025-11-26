@@ -7,8 +7,7 @@
 function letra_incorrecta(vidas) {
     vidas--;
     win.postMessage({ vidas }, "http://127.0.0.1:5500");
-    console.log(XMLDocument.vidas)
-
+   
     return vidas
 }
 
@@ -88,7 +87,7 @@ function eval_form() {
                     letra_nueva && ([mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides));
 
                     if (vides <= 0) {
-                        guardar(metodo_guardado)
+                        guardar(metodo_guardado,vides,tiempo)
                         boton.setAttribute("disabled", true);
                         clearInterval(contador);
                     }
