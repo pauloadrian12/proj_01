@@ -86,10 +86,7 @@ function eval_form() {
 
 
 
-                    if (letra_nueva) {
-                        [mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides)
-                    }
-
+                    if (letra_nueva) { [mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides) }
                     mensaje == "HAS PERDIDO" && boton.setAttribute("disabled", true);
                     break;
 
@@ -102,7 +99,6 @@ function eval_form() {
         }
         form.value = ""
         bloque_mensaje.innerHTML = mensaje
-
         document.getElementById("vides").innerText = +vides;
     })
 
