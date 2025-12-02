@@ -88,11 +88,15 @@ function eval_form() {
                     letra_nueva && ([mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides));
 
                     if (vides <= 0) {
-                        guardar(metodo_guardado,vides,tiempo)
+                        guardar(metodo_guardado,vides,tiempo,dia)
                         boton.setAttribute("disabled", true);
                         clearInterval(contador);
                     }
 
+
+                    
+
+                    
                     break;
 
 
