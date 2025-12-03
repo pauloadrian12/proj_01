@@ -7,11 +7,9 @@
 function letra_incorrecta(vidas) {
     vidas--;
     win.postMessage({ vidas }, "http://127.0.0.1:5500");
-   
+
     return vidas
 }
-
-
 
 
 /**
@@ -47,9 +45,6 @@ function analizar(dat, pal, vidas) {
 
 }
 
-
-
-
 function eval_form() {
     let form = document.getElementById("lletra")
     let bloque_mensaje = document.getElementById("mensaje")
@@ -83,15 +78,20 @@ function eval_form() {
                     // si es una letra nueva la agrega a las probadas y analiza
                     lletresProvades.push(dato_rec)
 
-
-
                     letra_nueva && ([mensaje, vides] = analizar(dato_rec, paraulaSecreta, vides));
 
                     if (vides <= 0) {
-                        guardar(metodo_guardado,vides,tiempo)
+                        guardar(metodo_guardado, vides, tiempo, dia)
                         boton.setAttribute("disabled", true);
                         clearInterval(contador);
                     }
+                    else if (paraulaVisible.indexOf("_") == -1) {
+                        mensaje = "HAS GANADO";
+                        guardar(metodo_guardado, vides, tiempo, dia)
+                        boton.setAttribute("disabled", true);
+                        clearInterval(contador);
+                    }
+
 
                     break;
 

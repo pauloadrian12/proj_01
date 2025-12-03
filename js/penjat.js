@@ -1,15 +1,16 @@
 
 let paraulaSecreta = "";
 let paraulaVisible = [];
-let vides = 1;
+let vides = 6;
 let temps = 0;
 let interval;
 let popup;
 let lletresProvades = [];
 //cookies o localstorage
-let metodo_guardado ="Cookies"
+let metodo_guardado ="localstorage"
 let contador
 let tiempo 
+let dia = new Date().toLocaleDateString()
 
 
 
