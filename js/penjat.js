@@ -9,8 +9,8 @@ let lletresProvades = [];
 //cookies o localstorage
 let metodo_guardado ="localstorage"
 let contador
-let tiempo 
 let dia = new Date().toLocaleDateString()
+
 
 
 
