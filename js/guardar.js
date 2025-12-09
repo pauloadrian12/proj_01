@@ -34,7 +34,7 @@ function guardar(metodo_guardado, vides, tiempo, dia) {
 
 
     }
-    else if (metodo_guardado == "localstorage") {
+    else if (metodo_guardado == "Localstorage") {
    
         let partida = {
             resultat: resultat,
