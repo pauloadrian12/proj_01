@@ -1,18 +1,5 @@
-window.onload = function () {
-
-    let statsElement = document.getElementById("stats");
-    let stats = JSON.parse(localStorage.getItem("stats"));
-    let stats_cookies = JSON.parse("[" + document.cookie.split("=").slice(1).toString() + "]");
-
-
-    if (stats) {
-         (stats = stats.concat(stats_cookies)); 
-        }else{
-            stats=stats_cookies
-        }
-
-
-    if (stats && stats.length > 0) {
+function cargar(stats,statsElement){
+if (stats && stats.length > 0) {
         let files = "";
         for (let i = stats.length - 1; i >= 0; i--) {
             let partida = stats[i];
@@ -42,4 +29,38 @@ window.onload = function () {
     } else {
         statsElement.innerHTML = "<div style='border:1px solid #000000ff; padding:5px; width:200px;'>No hay estadísticas disponibles.</div>";
     }
+}
+
+
+window.onload = function () {
+
+    let cookies = document.getElementById("cookies");
+    let local = document.getElementById("localstorage");
+    let statsElement = document.getElementById("stats");
+    let stats = JSON.parse(localStorage.getItem("stats"));
+    let stats_cookies = JSON.parse("[" + document.cookie.split("=").slice(1).toString() + "]");
+    
+
+
+
+
+    local.addEventListener("click", () => {
+       stats=JSON.parse(localStorage.getItem("stats"));
+       cargar(stats,statsElement)
+    });
+
+        
+    cookies.addEventListener("click", () => {
+          stats_cookies=JSON.parse("[" + document.cookie.split("=").slice(1).toString() + "]");
+          cargar(stats_cookies,statsElement)
+    });
+
+   
+
+
+
+
+
+
+    
 };
