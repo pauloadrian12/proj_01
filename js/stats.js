@@ -7,7 +7,7 @@ window.onload = function() {
     stats= stats.concat(stats_cookies);
     if (stats && stats.length > 0) {
         let files = "";
-        for (let i = 0; i < stats.length; i++) {
+        for (let i = stats.length - 1; i >= 0; i--) {
             let partida = stats[i];
             files += "<tr>" +
                         "<td>" + partida.resultat + "</td>" +

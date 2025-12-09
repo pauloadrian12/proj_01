@@ -49,6 +49,9 @@ function eval_form() {
     let form = document.getElementById("lletra")
     let bloque_mensaje = document.getElementById("mensaje")
     const boton = document.getElementById("prova")
+    let boton_tornar = document.getElementById("tornar2")
+    boton_tornar.disabled = true;
+
 
 
 
@@ -84,12 +87,23 @@ function eval_form() {
                         guardar(metodo_guardado, vides, tiempo, dia)
                         boton.setAttribute("disabled", true);
                         clearInterval(contador);
+                        boton_tornar.disabled = false;
+                        boton_tornar.onclick = () => {
+                            window.location.href = './principal.html';
+                            win.close();
+                        };
+
                     }
                     else if (paraulaVisible.indexOf("_") == -1) {
                         mensaje = "HAS GANADO";
                         guardar(metodo_guardado, vides, tiempo, dia)
                         boton.setAttribute("disabled", true);
                         clearInterval(contador);
+                        boton_tornar.disabled = false;
+                        boton_tornar.onclick = () => {
+                            window.location.href = './principal.html';
+                            win.close();
+                        };
                     }
 
 
