@@ -9,8 +9,6 @@ function guardar(metodo_guardado, vides, tiempo, dia) {
         }
 
 
-
-
     if (metodo_guardado == "Cookies") {
         
         

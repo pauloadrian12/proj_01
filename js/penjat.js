@@ -7,7 +7,7 @@ let interval;
 let popup;
 let lletresProvades = [];
 //"Cookies" o "Localstorage"
-let metodo_guardado ="Localstorage"
+let metodo_guardado ="Cookies"
 let contador
 let dia = new Date().toLocaleDateString()
 

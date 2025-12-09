@@ -1,5 +1,5 @@
 /**
- * Función para elegir de maera aleatoria una palabra del array de palabras y
+ * Función para elegir de manera aleatoria una palabra del array de palabras y
  * mostrar underscores "_" acorde el numero de carácteres de la palabra.
  * Tambien mostramos las vidas con las que comienza el usuario
  */
