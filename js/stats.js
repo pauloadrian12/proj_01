@@ -2,7 +2,9 @@ window.onload = function() {
 
     let statsElement = document.getElementById("stats");
     let stats = JSON.parse(localStorage.getItem("stats"));
+    let stats_cookies = JSON.parse("["+document.cookie.split("=").slice(1).toString()+"]");
 
+    stats= stats.concat(stats_cookies);
     if (stats && stats.length > 0) {
         let files = "";
         for (let i = 0; i < stats.length; i++) {
@@ -11,7 +13,7 @@ window.onload = function() {
                         "<td>" + partida.resultat + "</td>" +
                         "<td>" + partida.vidas + "</td>" +
                         "<td>" + partida.tiempo + "</td>" +
-                        "<td>" + partida.dia + "</td>" +
+                        "<td>" + partida.data + "</td>" +
                     "</tr>";
         }
 
