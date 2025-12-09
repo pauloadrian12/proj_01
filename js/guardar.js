@@ -30,7 +30,31 @@ function guardar(metodo_guardado, vides, tiempo, dia) {
 
     }
 
+    else if (metodo_guardado == "localstorage") {
+        let resultat = ""
+        if (vides === 0) {
+            resultat = "Derrota"
+        }
+        else {
+            resultat = "Victoria"
+        }
 
+        let partida = {
+            resultat: resultat,
+            vidas: vides,
+            tiempo: tiempo,
+            data: dia
+        };
 
+        let stats = JSON.parse(localStorage.getItem("stats")) || [];
 
+        stats.push(partida);
+
+        localStorage.setItem("stats", JSON.stringify(stats));
+    }
 }
+
+
+
+
+

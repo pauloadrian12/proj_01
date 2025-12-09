@@ -5,13 +5,13 @@ window.onload = function() {
 
     if (stats && stats.length > 0) {
         let files = "";
-        for (let i = 0; i < stats.length; i++) {
+        for (let i = stats.length - 1; i >= 0; i--) {
             let partida = stats[i];
             files += "<tr>" +
                         "<td>" + partida.resultat + "</td>" +
                         "<td>" + partida.vidas + "</td>" +
                         "<td>" + partida.tiempo + "</td>" +
-                        "<td>" + partida.dia + "</td>" +
+                        "<td>" + partida.data + "</td>" +
                     "</tr>";
         }
 
