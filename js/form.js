@@ -24,14 +24,14 @@ function letra_incorrecta(vidas) {
 function analizar(dat, pal, vidas) {
     console.log("analizando....")
     let enc = false
-    let resultado = "letra no encontrada"
+    let resultado = "Letra no encontrada"
     let i = 0;
 
     while (i < pal.length) {
         if (pal.charAt(i) == dat) {
             paraulaVisible[i] = dat;
             enc = true;
-            resultado = "letras encontrada!!!"
+            resultado = "Letra encontrada!"
             document.getElementById("paraula").innerText = paraulaVisible.join(" ");
         }
         i = i + 1;
@@ -39,7 +39,7 @@ function analizar(dat, pal, vidas) {
 
     enc || (vidas = letra_incorrecta(vidas))
 
-    vidas || (resultado = "HAS PERDIDO, " + "La palabra secreta era: " + pal)
+    vidas || (resultado = "HAS PERDIDO, " + "la palabra secreta era: " + pal)
 
     return [resultado, vidas]
 
@@ -64,7 +64,7 @@ function eval_form() {
 
         // si dato del form es 1 letra evalua si esta esta en los caracteres
         if (dato_rec.length == 1) {
-            mensaje = "caracter no valido";
+            mensaje = "Caracter no válido";
             for (let i of caracteres) {
                 //si la letra si esta en los caracteres evalua si esta en la lista de letras provadas
                 if (dato_rec === i) {
@@ -72,7 +72,7 @@ function eval_form() {
 
                     for (let letr of lletresProvades) {
                         if (dato_rec == letr) {
-                            mensaje = "caracter ya probado"
+                            mensaje = "Caracter ya probado"
 
                             letra_nueva = false
                             break
@@ -114,7 +114,7 @@ function eval_form() {
             }
 
         } else {
-            (mensaje = "solo introduzca un letra")
+            (mensaje = "Solo introduzca un letra")
         }
         form.value = ""
         bloque_mensaje.innerHTML = mensaje

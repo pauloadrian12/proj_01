@@ -9,8 +9,6 @@ function guardar(metodo_guardado, vides, tiempo, dia) {
         }
 
 
-
-
     if (metodo_guardado == "Cookies") {
         
         
@@ -34,7 +32,7 @@ function guardar(metodo_guardado, vides, tiempo, dia) {
 
 
     }
-    else if (metodo_guardado == "localstorage") {
+    else if (metodo_guardado == "Localstorage") {
    
         let partida = {
             resultat: resultat,
