@@ -31,7 +31,6 @@ if (stats && stats.length > 0) {
     }
 }
 
-
 window.onload = function () {
 
     let cookies = document.getElementById("cookies");
