@@ -1,7 +1,7 @@
 
 let paraulaSecreta = "";
 let paraulaVisible = [];
-let vides = 6;
+let vides = 1;
 let temps = 0;
 let interval;
 let popup;
@@ -25,6 +25,7 @@ window.onload = () => {
         Temporizador.setSeconds(Temporizador.getSeconds()+1)
          tiempo= Temporizador.getMinutes() +" : " + Temporizador.getSeconds()
         document.getElementById("temp").innerText =  tiempo;
+        win.closed && location.assign("./principal.html");
     }, 1000);
     
     inicialitzaJoc();
