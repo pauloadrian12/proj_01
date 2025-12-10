@@ -16,6 +16,7 @@ let dia = new Date().toLocaleDateString()
 
 let win = window.open("./penjat.html", "", "popup,width=500,height=500");
 
+
 window.onload = () => {
     let Temporizador = new Date(0)
 
