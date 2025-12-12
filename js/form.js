@@ -7,7 +7,6 @@
 function letra_incorrecta(vidas) {
     vidas--;
     win.postMessage({ vidas }, "http://127.0.0.1:5500");
-
     return vidas
 }
 
@@ -47,7 +46,11 @@ function analizar(dat, pal, vidas) {
 
 
 
-
+/**
+ * 
+ * 
+ * 
+ */
 function eval_form() {
     let form = document.getElementById("lletra")
     let bloque_mensaje = document.getElementById("mensaje")

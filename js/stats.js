@@ -1,3 +1,8 @@
+/**
+ * Carga una tabla con la informacion del objeto cargado en un objeto HTML
+ * @param {JSON } stats Objeto con las estadisticas
+ * @param {HTMLElement } statsElement Elemento de HTML con referencia
+ */
 function cargar(stats,statsElement){
 if (stats && stats.length > 0) {
         let files = "";
@@ -30,6 +35,9 @@ if (stats && stats.length > 0) {
         statsElement.innerHTML = "<div style='border:1px solid #000000ff; padding:5px; width:200px;'>No hay estadísticas disponibles.</div>";
     }
 }
+
+
+
 
 window.onload = function () {
 
