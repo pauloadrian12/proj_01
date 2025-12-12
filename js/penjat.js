@@ -1,3 +1,5 @@
+//Paulo Adrian Oliva
+//Alex Trigueros León
 
 let paraulaSecreta = "";
 let paraulaVisible = [];

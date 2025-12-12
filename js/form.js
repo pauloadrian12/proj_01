@@ -1,3 +1,5 @@
+//Paulo Adrian Oliva
+//Alex Trigueros León
 
 /**
  * Envia un mensaje con el numero de vidas al popup
