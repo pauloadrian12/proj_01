@@ -44,9 +44,20 @@ function analizar(dat, pal, vidas) {
 
 }
 
-
-
-
+/**
+ * Función maestra que se encarga de hacer lo siguiente cuando el usuario
+ * hace clic en el botón de probar letra:
+ * 
+ * - Hacer el control de carácteres que introduce el usuario como añadir
+ *   carácteres ya probados, controlar que no introduzca mas de uno etc...
+ * 
+ * - Muestra mensajes informativos dependiendo del estado de
+ *   la partida ("carácter no válido", "HAS GANADO", etc...).
+ * 
+ * - Controla cuando gana o pierde y habilita el botón de volver al menu
+ *   y para el contador de tiempo, además llama a la funcion de guardar 
+ *   para pasarle los parámetros de la partida.
+ */
 function eval_form() {
     let form = document.getElementById("lletra")
     let bloque_mensaje = document.getElementById("mensaje")
@@ -55,16 +66,13 @@ function eval_form() {
     boton_tornar.disabled = true;
 
 
-
-
-
     boton.addEventListener("click", () => {
 
         let dato_rec = form.value
         bloque_mensaje.innerHTML = "";
         let mensaje = ""
 
-        // si dato del form es 1 letra evalua si esta esta en los caracteres
+        // si dato del form es 1 letra evalua si esta esta en los carácteres
         if (dato_rec.length == 1) {
             mensaje = "Caracter no válido";
             for (let i of caracteres) {
