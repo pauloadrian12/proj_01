@@ -1,3 +1,6 @@
+//Paulo Adrian Oliva
+//Alex Trigueros León
+
 /**
  * Función que dependiendo el tipo de guardado especificado, ejecuta el
  * guardado usando uno o otro usando los parametros pasados.

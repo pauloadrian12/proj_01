@@ -1,3 +1,6 @@
+//Paulo Adrian Oliva
+//Alex Trigueros León
+
 /**
  * Carga una tabla con la informacion del objeto cargado en un objeto HTML
  * @param {JSON } stats Objeto con las estadisticas

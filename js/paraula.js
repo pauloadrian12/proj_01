@@ -1,3 +1,6 @@
+//Paulo Adrian Oliva
+//Alex Trigueros León
+
 /**
  * Función para elegir de manera aleatoria una palabra del array de palabras y
  * mostrar underscores "_" acorde el numero de carácteres de la palabra.
