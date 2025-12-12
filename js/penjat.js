@@ -1,7 +1,7 @@
 
 let paraulaSecreta = "";
 let paraulaVisible = [];
-let vides = 1;
+let vides = 6;
 let temps = 0;
 let interval;
 let popup;

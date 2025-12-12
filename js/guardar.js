@@ -2,7 +2,7 @@
  * Función que dependiendo el tipo de guardado especificado, ejecuta el
  * guardado usando uno o otro usando los parametros pasados.
  * 
- * @param {string} metodo_guardado metodo de guardado que se selecciona en la variable
+ * @param {string} metodo_guardado metodo de guardado que se selecciona en la variable metodo_guardado de penjat.js
  * @param {number} vides vidas que tiene el usuario al momento de llamar a la funcion
  * @param {string} tiempo tiempo transcurrido de la partida en el momento que se llama a la función
  * @param {string} dia fecha en formato dd/mm/aaaa en el momento en que se llama a la función
