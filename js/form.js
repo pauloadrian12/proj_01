@@ -46,11 +46,7 @@ function analizar(dat, pal, vidas) {
 
 
 
-/**
- * 
- * 
- * 
- */
+
 function eval_form() {
     let form = document.getElementById("lletra")
     let bloque_mensaje = document.getElementById("mensaje")
